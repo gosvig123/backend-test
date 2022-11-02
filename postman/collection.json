@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "693ef002-7473-4185-a927-1ac725f59a5e",
+		"name": "Lectures – Interview",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3824"
+	},
+	"item": [
+		{
+			"name": "Get all Topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/topics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Prisma and ORMs\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/topics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/topics/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"topics",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new Entry",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Static Typing\",\n    \"content\": \"Static typing prevents a lot of debugging problems.\",\n    \"type\": \"LECTURE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/topics/1/entries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"topics",
+						"1",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Entries in a Topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/topics/1/entries",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"topics",
+						"1",
+						"entries"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

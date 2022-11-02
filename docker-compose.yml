@@ -1,0 +1,19 @@
+version: '3.4'
+
+services:
+  # lectures:
+  #   image: lectures
+  #   build:
+  #     context: .
+  #     dockerfile: ./Dockerfile
+  #   environment:
+  #     NODE_ENV: production
+  #   ports:
+  #     - 8080:8080
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: lectures
+    ports:
+      - 5432:5432
