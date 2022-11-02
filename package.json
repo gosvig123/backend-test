@@ -17,7 +17,10 @@
   },
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "docker-compose up -d && yarn run db:setup && && nodemon src/index.js",
-    "db:setup": "prisma generate && prisma migrate deploy"
+    "dev": "docker-compose up -d && yarn run db:setup && nodemon src/index.js",
+    "db:setup": "prisma generate && prisma migrate dev"
+  },
+  "prisma": {
+    "seed": "node ./prisma/dev-seed.js"
   }
 }
